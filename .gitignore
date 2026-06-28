@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Test Reports
+reports/
+
+# Screenshots
+screenshots/current/
+screenshots/diff/
