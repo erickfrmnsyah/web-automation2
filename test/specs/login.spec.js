@@ -37,6 +37,12 @@ describe("Login",function(){
         assert.strictEqual(url,"https://www.saucedemo.com/inventory.html");
     });
 
+    it("Negative Login Using Unregitered User",async function(){
+        await loginPage.login(process.env.UNREGISTERED_USER, process.env.VALID_PASSWORD);
+        let error = await loginPage.getErrorMessage();
+        assert.ok(error.includes('match'))
+    });
+
     it("Negative Login Using Invalid Password",async function(){
         await loginPage.login(process.env.STANDARD_USER, process.env.INVALID_PASSWORD);
         let error = await loginPage.getErrorMessage();

@@ -3,8 +3,7 @@
     "version": "2.0.0",
     "description": "Selenium WebDriver tests using Mocha with Mochawesome reports",
     "scripts": {
-        "tests": "mocha test --recursive --timeout 60000 --reporter mochawesome --reporter-options reportDir=reports,overwrite=true,html=true,json=true",
-        "test": "mocha test --recursive --timeout 60000"
+        "test": "mocha test --recursive --timeout 60000 --reporter mochawesome --reporter-options reportDir=reports,overwrite=true,html=true,json=true"
     },
     "dependencies": {
         "dotenv": "^17.4.2",
